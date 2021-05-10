@@ -25,6 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Home from './src/screens/Home/Home';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -61,7 +62,7 @@ const App: () => Node = () => {
 
   return (
     <View style={{flex:1,backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
-      <Text>Hello</Text>
+      <Home></Home>
     </View>
   );
 };
