@@ -60,8 +60,8 @@ const App: () => Node = () => {
   };
 
   return (
-    <View style={{backgroundColor:'white',flex:1}}>
-      <Text>Hell</Text>
+    <View style={{flex:1,backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
+      <Text>Hello</Text>
     </View>
   );
 };
@@ -71,18 +71,7 @@ const styles = StyleSheet.create({
     marginTop: 32,
     paddingHorizontal: 24,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+  
 });
 
 export default App;
