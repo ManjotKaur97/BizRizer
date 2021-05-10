@@ -3,6 +3,8 @@ import {Text, TouchableOpacity, View,  StyleSheet, ScrollView} from 'react-nativ
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import EIcon from 'react-native-vector-icons/Entypo';
+import AIcon from 'react-native-vector-icons/AntDesign';
+import { Body, Card, CardItem } from 'native-base';
 export default class Home extends Component{
     constructor(props){
         super(props)
@@ -32,12 +34,48 @@ export default class Home extends Component{
                     </View>
                     {/* bottom screen */}
                     <View style={[styles.bottomScreen]}>
-                        <ScrollView>
-                            <Text style={{fontSize:100}}>text1 </Text>
-                            <Text style={{fontSize:100}}>text2 </Text>
-                            <Text style={{fontSize:100}}>text3 </Text>
-                            <Text style={{fontSize:100}}>text4 </Text>
-                            <Text style={{fontSize:100}}>text5 </Text>
+                        <ScrollView
+                        contentContainerStyle={{
+                            justifyContent:'center',
+                            alignItems:'center'
+                        }}
+                        >
+                            <Card style={{width:'90%',height:300}}>
+                                <CardItem style={{backgroundColor:'orange',width:'100%',height:'100%'}}>
+                                    <Body style={{backgroundColor:'green',flexDirection:'column'}}>
+                                        {/* heading */}
+                                        <View style={{ 
+                                            width:'100%',
+                                            height:'20%',
+                                            backgroundColor:'red',
+                                            flexDirection:'row',
+                                            justifyContent:'space-evenly',
+                                            alignItems:'center'
+                                        }}>
+                                            <Text>Google</Text>
+                                            <AIcon name="google" size={30} color="#900" />
+                                        </View>
+                                        {/* graph */}
+                                        <View style={{width:'100%',height:'80%',backgroundColor:'pink'}}>
+
+                                        </View>
+                                    </Body>
+                                </CardItem>
+                            </Card>
+                            <Card style={{width:'90%',height:300}}>
+                                <CardItem style={{backgroundColor:'orange',width:'100%',height:'100%'}}>
+                                    <Body style={{backgroundColor:'green',flexDirection:'column'}}>
+                                        <Text></Text>
+                                    </Body>
+                                </CardItem>
+                            </Card>
+                            <Card style={{width:'90%',height:300}}>
+                                <CardItem style={{backgroundColor:'orange',width:'100%',height:'100%'}}>
+                                    <Body style={{backgroundColor:'green'}}>
+                                        <Text></Text>
+                                    </Body>
+                                </CardItem>
+                            </Card>
                         </ScrollView>
                     </View>
             </View>
