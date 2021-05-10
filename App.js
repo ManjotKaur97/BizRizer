@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import 'react-native-gesture-handler';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -25,6 +26,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 import Home from './src/screens/Home/Home';
 
 const Section = ({children, title}): Node => {
@@ -59,11 +62,16 @@ const App: () => Node = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+  const Drawer = createDrawerNavigator();
   return (
-    <View style={{flex:1,backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
-      <Home></Home>
-    </View>
+
+             <NavigationContainer>
+                 <Drawer.Navigator initialRouteName="Home">
+                <Drawer.Screen name="Home" component={Home} />
+              
+              </Drawer.Navigator>
+    </NavigationContainer>
+    
   );
 };
 
