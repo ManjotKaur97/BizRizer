@@ -37,7 +37,16 @@ export default class Home extends Component {
           </View>
           {/* nav icon */}
           <View style={[styles.nav]}>
-            <EIcon name="location-pin" size={30} color="#1565c0" />
+            <EIcon
+              name="location-pin"
+              size={30}
+              color="#1565c0"
+              style={{
+                backgroundColor: '#1565c0',
+                opacity: 0.3,
+                borderRadius: 20,
+              }}
+            />
           </View>
         </View>
         {/* bottom screen */}
